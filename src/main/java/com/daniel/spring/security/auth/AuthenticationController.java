@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 1/30/2023
  */
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/api/v1/auth")
+@RequiredArgsConstructor
 public class AuthenticationController {
 
     private final AuthenticationService service;
@@ -30,5 +30,4 @@ public class AuthenticationController {
     ) {
         return ResponseEntity.ok(service.authenticate(request));
     }
-
 }

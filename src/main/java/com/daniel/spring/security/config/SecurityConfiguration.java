@@ -1,6 +1,5 @@
 package com.daniel.spring.security.config;
 
-import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,11 +15,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  * @since 1/30/2023
  */
 @Configuration
-@RequiredArgsConstructor
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfiguration {
 
-    private final Filter jwtAuthFilter;
+    private final JwtAuthenticationFiler jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
 
     @Bean
